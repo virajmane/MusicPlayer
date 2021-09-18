@@ -1,0 +1,56 @@
+*
+{
+    outline: none;
+}
+
+html, body
+{
+    height: 100%;
+    min-height: 100%;
+}
+
+body
+{
+    margin: 0;
+}
+
+body, input
+{
+    cursor: url(http://k003.kiwi6.com/hotlink/vp054ir5gt/c1.png) 32 32, auto;
+    cursor: -webkit-image-set(url(http://k003.kiwi6.com/hotlink/vp054ir5gt/c1.png) 1x,url(http://k003.kiwi6.com/hotlink/z6fy599487/c2.png) 2x) 32 32, auto;
+}
+
+body:active, input:active
+{
+    cursor: url(http://k003.kiwi6.com/hotlink/3p6w4icbzt/c1a.png) 32 32, auto;
+    cursor: -webkit-image-set( url(http://k003.kiwi6.com/hotlink/3p6w4icbzt/c1a.png) 1x, url(http://k003.kiwi6.com/hotlink/6ma7828al1/c2a.png) 2x ) 32 32, auto;
+}
+
+#app-cover
+{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 434px;
+    margin: -41px auto 0 auto;
+}
+
+#app
+{
+    position: relative;
+    width: 82px;
+    height: 82px;
+    border-radius: 120px;
+    margin: 0 auto;
+    transition: 0.15s ease width;
+    z-index: 2;
+}
+
+form
+{
+    position: relative;
+    height: 82px;
+    cursor: auto;
+    border-radius: 120px;
+}

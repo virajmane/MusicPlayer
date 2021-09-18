@@ -1,0 +1,36 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Music Search</title>
+    <link rel="stylesheet" href="../static/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="../static/assets/fonts/font-awesome.min.css">
+</head>
+
+<div class="card" style="width: 25rem;margin: 0 auto;float: none;margin-bottom: 10px">
+  <div class="card-body">
+        <div class="card-body">
+    <h5 class="card-title">{{songs[0].replace("_", " ")}}</h5>
+<audio id="player" controls>
+  <source src="../static/songs/{{songs[0]}}" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<p></p>
+<div> 
+  <button class="btn btn-primary" onclick="document.getElementById('player').play()">Play</button> 
+  <button class="btn btn-primary" onclick="document.getElementById('player').pause()">Pause</button> 
+  <button class="btn btn-primary" onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
+  <button class="btn btn-primary" onclick="document.getElementById('player').volume -= 0.1">Vol -</button> 
+</div>
+</div>
+  </div>
+</div>
+{%for i in songs[1:]%}
+<div class="card" style="width: 25rem;margin: 0 auto;float: none;margin-bottom: 10px">
+  <div class="card-body">
+    <h5 class="card-title">{{i.replace("_", " ")}}</h5>
+</div>
+<a href="/songs/{{i}}" class="stretched-link"></a>
+  </div>
+{%endfor%}
+<script src="../static/assets/bootstrap/js/bootstrap.min.js"></script>

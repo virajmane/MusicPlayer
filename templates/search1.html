@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+  
+<ol>
+<!-- For loop logic of jinja template -->
+{%for i in searchResult%}
+    <li>
+        <a href=https://MusicPlayer.virajman3.repl.co/download?query=https://www.youtube.com/watch?v={{i["id"]}}>
+         <img alt="thumbnail" src={{i["thumbnails"][0]["url"]}}
+         width=150" height="70">
+      </a>
+      <br>
+      <a href=https://MusicPlayer.virajman3.repl.co/download?query=https://www.youtube.com/watch?v={{i["id"]}}>{{i["title"]}}</a>
+      </br>
+      <br>
+    </li>
+{%endfor%}
+  
+</ol>
+  
+</body>
+</html>

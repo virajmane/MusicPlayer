@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="../static/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/assets/css/News-Cards.css">
+    <link rel="stylesheet" href="../static/assets/css/styles.css">
+</head>
+
+<body>
+
+<div class="card" style="width: 0 auto;margin: 10px;float: none;margin-bottom: 10px">
+<div class="card-body">
+<h5 class="card-title">{{title.replace("_", " ")[:-4]}}</h5>
+
+<audio id="myAudio" controls autoplay>
+  <source src="../static/songs/{{title}}"" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<div>
+  <button class="btn btn-primary" style="outline: none;box-shadow: none;" onclick="document.getElementById('myAudio').play()">Play</button> 
+  <button class="btn btn-primary" style="outline: none;box-shadow: none;" onclick="document.getElementById('myAudio').pause()">Pause</button> 
+  <button class="btn btn-primary" style="outline: none;box-shadow: none;" onclick="document.getElementById('myAudio').volume += 0.1">Vol +</button> 
+  <button class="btn btn-primary" style="outline: none;box-shadow: none;" onclick="document.getElementById('myAudio').volume -= 0.1">Vol -</button> 
+  <p></p>
+<form method ="post">
+  <button class="btn btn-primary" style="outline: none;box-shadow: none;" type="submit" name="Download"> Download </button>
+</form> 
+</div>
+</div>
+  </div>
+</body>
+</html>
