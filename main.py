@@ -60,6 +60,13 @@ def download():
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+	if request.method == "POST":
+		result = request.form['keyword']
+		videosSearch = VideosSearch(result, limit=20)
+		searchResults = videosSearch.result()
+		searchResults = searchResults["result"]
+		#print(searchResults)
+		return render_template("search.html",len=len(searchResults),searchResult=searchResults)
 	arr = os.listdir('/home/runner/MusicPlayer/static/songs')
 	return render_template("index.html", songs=arr)
 

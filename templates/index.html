@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="../static/assets/fonts/font-awesome.min.css">
 </head>
 
+
+    <form method ="post">
+<div class="input-group" style="margin-top: 1px;">
+  <input type="search" name="keyword" class="form-control rounded" placeholder="Search song..." aria-label="Search"
+    aria-describedby="search-addon" />
+  <button type="submit" class="btn btn-outline-primary">search</button>
+</div>
+</div>
+    </form>
+
+
 <div class="card">
   <div class="card-body">
         <div class="card-body">
@@ -26,6 +37,7 @@ Your browser does not support the audio element.
 </div>
   </div>
 </div>
+
 {%for i in songs[1:]%}
 <div class="card">
   <div class="card-body">
